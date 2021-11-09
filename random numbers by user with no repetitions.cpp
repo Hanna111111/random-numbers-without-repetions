@@ -19,7 +19,7 @@ cin >> size;
 
 int array[size];
 
-//input random numbers from 0 to 20
+//input random numbers from 0 to 20 and delete equals
 for(int i = 0; i < size;){
     
     bool alreadyThere = false;
@@ -39,8 +39,35 @@ for(int i = 0; i < size;){
     }
 }
 
+//find the smalest number in array
+int theSmallest = array[0];
 
-//output numbers 
+for(int i = 0; i < size; i++){
+    
+    if(array[i] < theSmallest){
+        theSmallest = array[i];
+    }
+    
+}
+cout << "The smallest number in this array is: " << theSmallest << endl;
+
+
+
+//find the biggest number in array
+int theBiggest = array[0];
+
+for(int i = 0; i < size; i++){
+    
+    if(array[i] > theBiggest){
+        theBiggest = array[i];
+    }
+    
+}
+cout << "The biggest number in this array is: " << theBiggest << endl;
+
+    
+//output numbers in array
+cout << "Array is: ";
 for(int i = 0; i < size; i++){
     cout << array[i] << " ";
 }
@@ -49,3 +76,5 @@ for(int i = 0; i < size; i++){
 
     return 0;
 }
+
+
